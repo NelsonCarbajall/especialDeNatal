@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Hadassa 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffe6f0, #fff);
+      font-family: 'Great Vibes', cursive;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container-hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: #e91e63;
+      text-shadow: 2px 2px 5px #fff;
+    }
+
+    .moon {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle at center, #fffacd, #ffd700);
+      border-radius: 50%;
+      box-shadow: 0 0 30px #ffd700;
+      z-index: 0;
+    }
+
+    .flower {
+      position: absolute;
+      top: -50px;
+      font-size: 24px;
+      color: #ff69b4;
+      animation: fall linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    .rosa {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  font-size: 60px;
+  animation: bloom 2s ease-in-out forwards, sway 4s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes bloom {
+  0% {
+    transform: translateX(-50%) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(-50%) scale(1) rotate(-3deg);
+  }
+  50% {
+    transform: translateX(-50%) scale(1) rotate(3deg);
+  }
+  100% {
+    transform: translateX(-50%) scale(1) rotate(-3deg);
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="moon"></div>
+
+  <div class="container-hero">
+    <h1>Para Hadassa, com todo meu amor 💖</h1>
+    <p class="fs-4 text-muted">Você é a luz da minha vida e a flor mais linda do meu jardim.</p>
+  </div>
+
+  <!-- Flores flutuando -->
+  <script>
+    const flowerCount = 20;
+    for (let i = 0; i < flowerCount; i++) {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.style.left = Math.random() * 100 + 'vw';
+      flower.style.animationDuration = (5 + Math.random() * 5) + 's';
+      flower.innerHTML = '🌸';
+      document.body.appendChild(flower);
+    }
+  </script>
+<!-- Rosa animada -->
+<div class="rosa">
+  🌹
+</div>
+
+</body>
+</html>
